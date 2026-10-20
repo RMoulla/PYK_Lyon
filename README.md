@@ -14,8 +14,8 @@ Ce dépôt rassemble le support de la session, les jeux de données et des noteb
 | Bases de Python | [Lire le notebook](Copie_de_TP_Introduction_Python.ipynb) · [Ouvrir dans Colab](https://colab.research.google.com/github/RMoulla/PYK_Lyon/blob/main/Copie_de_TP_Introduction_Python.ipynb) | Aucune |
 | Analyse des prix immobiliers | [Lire le corrigé](TP_Seloger_Correction.ipynb) · [Ouvrir dans Colab](https://colab.research.google.com/github/RMoulla/PYK_Lyon/blob/main/TP_Seloger_Correction.ipynb) | [selogerdata.csv](selogerdata.csv) |
 | Analyse des données de crédit | [Lire le notebook](Copie_de_TP_German_Credit.ipynb) · [Ouvrir dans Colab](https://colab.research.google.com/github/RMoulla/PYK_Lyon/blob/main/Copie_de_TP_German_Credit.ipynb) | [german_credit_data.csv](german_credit_data.csv) |
-| Analyse descriptive du churn | [Lire le notebook](TP_Analyse_Données_Churn.ipynb) · [Ouvrir dans Colab](https://colab.research.google.com/github/RMoulla/PYK_Lyon/blob/main/TP_Analyse_Données_Churn.ipynb) | [customer_churn.csv](customer_churn.csv) |
-| Analyse et prédiction du churn | [Lire le notebook](TP_churn.ipynb) · [Ouvrir dans Colab](https://colab.research.google.com/github/RMoulla/PYK_Lyon/blob/main/TP_churn.ipynb) | [customer_churn.csv](customer_churn.csv) |
+| Churn : analyse exploratoire et régression logistique | [Lire le TP complet](Classification_Churn_RL_Correction.ipynb) · [Ouvrir dans Colab](https://colab.research.google.com/github/RMoulla/PYK_Lyon/blob/main/Classification_Churn_RL_Correction.ipynb) | [customer_churn.csv](customer_churn.csv) |
+| Visualisation interactive avec Plotly | [Lire le notebook](TP_Plotly_Gapminder.ipynb) · [Ouvrir dans Colab](https://colab.research.google.com/github/RMoulla/PYK_Lyon/blob/main/TP_Plotly_Gapminder.ipynb) | Gapminder, intégré à Plotly |
 
 Le support peut aussi être [téléchargé directement](https://raw.githubusercontent.com/RMoulla/PYK_Lyon/main/PYK_Lyon.pdf).
 
@@ -40,6 +40,8 @@ Un notebook (`.ipynb`) alterne explications et cellules de code. GitHub permet d
 
 **Ouvrir le notebook depuis GitHub n’importe pas automatiquement ses données.** Après une réinitialisation de la session Colab, importez à nouveau les CSV et réexécutez les cellules.
 
+Le TP Plotly charge les données Gapminder avec `px.data.gapminder()` : aucun CSV à importer. Sa dernière cellule crée `plotly_gapminder_2007.html`, un fichier HTML avec le JavaScript embarqué, téléchargeable depuis les fichiers Colab.
+
 Les notebooks contiennent le code corrigé. Leurs anciennes sorties ont été effacées : les tableaux et graphiques apparaîtront après exécution. Aucune clé API n’est nécessaire pour ces TP.
 
 ## Repères pour les exercices
@@ -47,8 +49,8 @@ Les notebooks contiennent le code corrigé. Leurs anciennes sorties ont été ef
 - **Bases Python** : variables, types, conditions, boucles et listes.
 - **Immobilier** : nettoyage des données, analyse exploratoire, visualisation et régression pour étudier les prix.
 - **Crédit** : nettoyage, statistiques descriptives, création de variables, visualisation et modélisation.
-- **Churn — analyse descriptive** : explorer les clients et comparer les groupes à l’aide de statistiques et de graphiques.
-- **Churn — prédiction** : prolonger l’exploration par un modèle de prédiction du départ des clients.
+- **Churn** : analyse exploratoire, séparation entraînement/test, régression logistique avec `statsmodels`, prédictions et évaluation par accuracy, précision, rappel et F1. Le TP utilise un seuil de classification de 0,25, que vous pouvez modifier pour comparer les résultats.
+- **Plotly** : nuages de points, taille des bulles, facettes, animations, courbes temporelles, carte et export HTML.
 
 ## Compléments
 
